@@ -9,7 +9,14 @@
 
   --clr-background-dark: #f8f8f2;
   --clr-background-light: #fffffb;
-  --clr-background-gradient: linear-gradient(to right bottom, #f44336, #ff8a65);
+  --clr-background-gradient: linear-gradient(
+    to right bottom,
+    #001c2a,
+    #03202e,
+    #062331,
+    #0b2735,
+    #0f2b39
+  );
   --clr-background-transparent: transparent;
   --clr-background-disabled: #c4c8ca;
 

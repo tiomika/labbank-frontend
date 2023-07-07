@@ -2,12 +2,5 @@
   height: 90px;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(
-    to right bottom,
-    #001c2a,
-    #03202e,
-    #062331,
-    #0b2735,
-    #0f2b39
-  );
+  background: var(--clr-background-gradient);
 }
