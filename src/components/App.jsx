@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Text from "./Text";
 
 function App() {
   // POSSO RETORNAR:
@@ -13,7 +14,12 @@ function App() {
   // NÃO POSSO RETORNAR
   // objetos
 
-  return <Header />;
+  return (
+    <div>
+      <Header />
+      <Text element={"h3"}>Olá, mundo!!!!!!!!!!!!!</Text>
+    </div>
+  );
 }
 
 export default App;

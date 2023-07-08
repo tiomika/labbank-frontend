@@ -4,9 +4,11 @@ import "./Header.css";
 
 function Header() {
   return (
-    <header className="header">
-      <Logo />
-    </header>
+    <div>
+      <header className="header">
+        <Logo />
+      </header>
+    </div>
   );
 }
 
