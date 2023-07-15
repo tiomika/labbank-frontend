@@ -5,7 +5,6 @@ import "./Text.css";
 // const Text = () => {}
 
 function Text(props) {
-  console.log(props);
   switch (props.element) {
     case "h1":
       return <h1 className="text_container heading1">{props.children}</h1>;
@@ -20,7 +19,11 @@ function Text(props) {
     case "small":
     case "smaller":
     case "caption":
-      return <span className="text_container">{props.children}</span>;
+      return (
+        <span className={`text_container ${props.element}`}>
+          {props.children}
+        </span>
+      );
     default:
       return <p className="text_container paragraph">{props.children}</p>;
   }
@@ -28,7 +31,17 @@ function Text(props) {
 
 Text.propTypes = {
   children: PropTypes.string,
-  element: PropTypes.string,
+  element: PropTypes.oneOf([
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "small",
+    "smaller",
+    "caption",
+    "paragraph",
+  ]),
 };
 
 export default Text;
