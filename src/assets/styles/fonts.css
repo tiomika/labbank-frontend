@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap");
+
+:root {
+  --fnt-font-size: 18px;
+  --fnt-line-height: 2em;
+  --fnt-font-family: "Montserrat", "Arial Narrow", Arial, sans-serif;
+
+  --fnt-font-heading-1: 2.488rem;
+  --fnt-font-heading-2: 2.07rem;
+  --fnt-font-heading-3: 1.728rem;
+  --fnt-font-heading-4: 1.44rem;
+  --fnt-font-heading-5: 1.2rem;
+  --fnt-font-paragraph: 1rem;
+  --fnt-font-small: 0.833rem;
+  --fnt-font-smaller: 0.694rem;
+  --fnt-font-caption: 0.579rem;
+
+  --fnt-font-weight-light: 200;
+  --fnt-font-weight-regular: 400;
+  --fnt-font-weight-medium: 500;
+  --fnt-font-weight-bold: 700;
+
+  --fnt-font-color-primary: var(--clr-primary-main);
+  --fnt-font-color-secondary: var(--clr-secondary-main);
+
+  --fnt-font-color-gray: var(--clr-text-gray);
+  --fnt-font-color-black: var(--clr-text-black);
+  --fnt-font-color-white: var(--clr-text-white);
+  --fnt-font-color-danger: var(--clr-message-danger);
+  --fnt-font-color-success: var(--clr-message-success);
+}
