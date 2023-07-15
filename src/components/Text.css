@@ -1,0 +1,49 @@
+.text_container {
+  font-family: var(--fnt-font-family);
+  font-size: var(--fnt-font-paragraph);
+  font-weight: var(--fnt-font-weight-light);
+  line-height: var(--fnt-line-height);
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.heading1 {
+  font-size: var(--fnt-font-heading-1);
+}
+
+.heading2 {
+  font-size: var(--fnt-font-heading-2);
+}
+
+.heading3 {
+  font-size: var(--fnt-font-heading-3);
+}
+
+.heading4 {
+  font-size: var(--fnt-font-heading-4);
+}
+
+.heading5 {
+  font-size: var(--fnt-font-heading-5);
+}
+
+.heading6 {
+  font-size: var(--fnt-font-heading-6);
+}
+
+.paragraph {
+  font-size: var(--fnt-font-paragraph);
+}
+
+.small {
+  font-size: var(--fnt-font-small);
+}
+
+.smaller {
+  font-size: var(--fnt-font-smaller);
+}
+
+.caption {
+  font-size: var(--fnt-font-caption);
+}
