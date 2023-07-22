@@ -1,14 +1,15 @@
 import Logo from "./Logo";
 
+import Container from "./Container";
 import "./Header.css";
 
 function Header() {
   return (
-    <div>
-      <header className="header">
+    <header className="header">
+      <Container>
         <Logo />
-      </header>
-    </div>
+      </Container>
+    </header>
   );
 }
 
