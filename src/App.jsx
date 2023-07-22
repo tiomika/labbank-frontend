@@ -1,11 +1,9 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
 import { Header } from "./components/Header";
 import { Login } from "./pages/Login";
 
 import "./App.css";
-
-export const appContext = createContext();
-const AppContext = appContext.Provider;
+import { AppContext } from "./contexts/AppContext";
 
 function App() {
   const [numeroDaConta, setNumeroDaConta] = useState("");
@@ -18,9 +16,9 @@ function App() {
   return (
     <AppContext
       value={{
-        mostrarValores: mostrarValores,
-        setNumeroDaConta: setNumeroDaConta,
-        setSenha: setSenha,
+        mostrarValores,
+        setNumeroDaConta,
+        setSenha,
       }}
     >
       <div>

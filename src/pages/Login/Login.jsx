@@ -1,14 +1,15 @@
 import { useContext } from "react";
 import WalletIllustration from "../../assets/imgs/wallet.svg";
 
-import { appContext } from "../../App";
 import { Button } from "../../components/Button";
 import { Paper } from "../../components/Paper";
 import { Text } from "../../components/Text";
 import { TextInput } from "../../components/TextInput";
+import { appContext } from "../../contexts/AppContext";
 
 function Login() {
   const values = useContext(appContext);
+
   return (
     <div className="formContainer">
       <Paper>
