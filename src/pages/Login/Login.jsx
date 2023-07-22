@@ -1,15 +1,14 @@
-import { useState } from "react";
+import { useContext } from "react";
 import WalletIllustration from "../../assets/imgs/wallet.svg";
 
+import { appContext } from "../../App";
 import { Button } from "../../components/Button";
 import { Paper } from "../../components/Paper";
 import { Text } from "../../components/Text";
 import { TextInput } from "../../components/TextInput";
 
 function Login() {
-  const [numeroDaConta, setNumeroDaConta] = useState("");
-  const [senha, setSenha] = useState("");
-
+  const values = useContext(appContext);
   return (
     <div className="formContainer">
       <Paper>
@@ -20,13 +19,17 @@ function Login() {
         <div className="formContent">
           <div>
             <TextInput
-              onChangeText={setNumeroDaConta}
+              onChangeText={values.setNumeroDaConta}
               label="Número da conta com dígito"
               type="text"
             />
-            <TextInput onChangeText={setSenha} label="Senha" type="password" />
+            <TextInput
+              onChangeText={values.setSenha}
+              label="Senha"
+              type="password"
+            />
             {/* <Link to="#">Esqueci minha senha</Link> */}
-            <Button>Entrar</Button>
+            <Button onClick={values.mostrarValores}>Entrar</Button>
           </div>
           <div>
             <img src={WalletIllustration} alt="Wallet at login page" />
