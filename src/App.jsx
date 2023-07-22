@@ -1,10 +1,11 @@
 import { useState } from "react";
-import WalletIllustration from "../assets/imgs/wallet.svg";
+import WalletIllustration from "./assets/imgs/wallet.svg";
 
-import Header from "./Header";
-import Paper from "./Paper";
-import Text from "./Text";
-import TextInput from "./TextInput";
+import { Button } from "./components/Button";
+import { Header } from "./components/Header";
+import { Paper } from "./components/Paper";
+import { Text } from "./components/Text";
+import { TextInput } from "./components/TextInput";
 
 import "./App.css";
 
@@ -34,7 +35,7 @@ function App() {
                 type="password"
               />
               {/* <Link to="#">Esqueci minha senha</Link> */}
-              {/* <Button>Entrar</Button> */}
+              <Button>Entrar</Button>
             </div>
             <div>
               <img src={WalletIllustration} alt="Wallet at login page" />
