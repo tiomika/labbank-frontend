@@ -7,7 +7,6 @@ import Text from "./Text";
 import TextInput from "./TextInput";
 
 import "./App.css";
-import DebugState from "./DebugState";
 
 function App() {
   const [numeroDaConta, setNumeroDaConta] = useState("");
@@ -37,7 +36,7 @@ function App() {
               <img src={WalletIllustration} alt="Wallet at login page" />
             </div>
           </div>
-          <DebugState state={{ numeroDaConta, senha }} />
+          {/* <DebugState state={{ numeroDaConta, senha }} /> */}
         </Paper>
       </div>
     </div>
