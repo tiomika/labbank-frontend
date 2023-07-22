@@ -5,12 +5,22 @@
   margin-top: 2rem;
 }
 
+.subtitle {
+  margin-bottom: 1rem;
+}
+
 .formContent {
   width: 100%;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .formContent div {
   width: 100%;
+}
+
+.formContent div > img {
+  display: block;
+  margin-left: auto;
 }

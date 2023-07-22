@@ -18,7 +18,9 @@ function App() {
       <div className="formContainer">
         <Paper>
           <Text element={"h1"}>Seja bem vindo!</Text>
-          <Text element={"paragraph"}>Digite os seus dados de acesso</Text>
+          <div className="subtitle">
+            <Text element={"paragraph"}>Digite os seus dados de acesso</Text>
+          </div>
           <div className="formContent">
             <div>
               <TextInput
@@ -31,6 +33,8 @@ function App() {
                 label="Senha"
                 type="password"
               />
+              {/* <Link to="#">Esqueci minha senha</Link> */}
+              {/* <Button>Entrar</Button> */}
             </div>
             <div>
               <img src={WalletIllustration} alt="Wallet at login page" />
