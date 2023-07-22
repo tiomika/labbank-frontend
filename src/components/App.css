@@ -1,0 +1,16 @@
+.formContainer {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.formContent {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.formContent div {
+  width: 100%;
+}
