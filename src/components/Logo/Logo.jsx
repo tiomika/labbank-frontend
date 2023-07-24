@@ -1,4 +1,4 @@
-import logoNulab from "../assets/imgs/logo-light.svg";
+import logoNulab from "../../assets/imgs/logo-light.svg";
 
 import "./Logo.css";
 

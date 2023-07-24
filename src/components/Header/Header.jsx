@@ -1,6 +1,6 @@
-import Logo from "./Logo";
+import { Container } from "../Container";
+import { Logo } from "../Logo";
 
-import Container from "./Container";
 import "./Header.css";
 
 function Header() {
