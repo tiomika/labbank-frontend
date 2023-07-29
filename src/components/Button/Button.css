@@ -10,10 +10,18 @@
   cursor: pointer;
 }
 
-.primary {
+.button_container.primary {
   background-color: var(--clr-primary-dark);
 }
 
 .button_container.secondary {
   background-color: var(--clr-secondary-main);
+}
+
+button:disabled.button_container,
+button:disabled.button_container.primary,
+button:disabled.button_container.secondary {
+  background-color: var(--clr-background-disabled);
+  color: var(--fnt-font-color-gray);
+  cursor: not-allowed;
 }
