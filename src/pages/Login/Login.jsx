@@ -12,7 +12,12 @@ import { appContext } from "../../contexts/AppContext";
 import "./Login.css";
 
 function Login() {
-  const values = useContext(appContext);
+  const {
+    mostrarValores,
+    setNumeroDaConta,
+    setSenha,
+    valores: { numeroDaConta },
+  } = useContext(appContext);
 
   return (
     <div className="form_container">
@@ -32,26 +37,21 @@ function Login() {
         <div className="login_panels">
           <div className="login_panel column_panel">
             <TextInput
-              onChangeText={values.setNumeroDaConta}
+              onChangeText={setNumeroDaConta}
               label="Número da conta com dígito"
               type="text"
-              message="O número da conta deve conter 6 dígitos"
             />
-            <TextInput
-              onChangeText={values.setSenha}
-              label="Senha"
-              type="password"
-            />
+            <TextInput onChangeText={setSenha} label="Senha" type="password" />
             <Link to="#">Esqueci minha senha</Link>
             <div className="login_panel buttons">
-              <Button fullWidth onClick={values.mostrarValores}>
+              <Button
+                disabled={numeroDaConta.length < 7}
+                fullWidth
+                onClick={mostrarValores}
+              >
                 Entrar
               </Button>
-              <Button
-                color="secondary"
-                fullWidth
-                onClick={values.mostrarValores}
-              >
+              <Button color="secondary" fullWidth onClick={mostrarValores}>
                 Quero abrir minha conta
               </Button>
             </div>
@@ -60,8 +60,6 @@ function Login() {
             <img src={WalletIllustration} alt="Wallet at login page" />
           </div>
         </div>
-
-        {/* <DebugState state={{ numeroDaConta, senha }} /> */}
       </Paper>
     </div>
   );
