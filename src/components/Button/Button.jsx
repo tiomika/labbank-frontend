@@ -2,9 +2,15 @@ import PropTypes from "prop-types";
 
 import "./Button.css";
 
-function Button({ children, ...otherProps }) {
+function Button({ children, fullWidth, color = "primary", ...otherProps }) {
   return (
-    <button {...otherProps} className="button_container">
+    <button
+      {...otherProps}
+      style={{
+        width: fullWidth ? "100%" : "auto",
+      }}
+      className={`button_container ${color}`}
+    >
       {children}
     </button>
   );
@@ -12,6 +18,8 @@ function Button({ children, ...otherProps }) {
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
+  fullWidth: PropTypes.bool,
+  color: PropTypes.oneOf(["primary", "secondary"]),
 };
 
 export default Button;

@@ -3,9 +3,17 @@
   background-color: var(--clr-primary-dark);
   font-size: var(--fnt-font-small);
   color: var(--fnt-font-color-white);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: var(--border-radius);
 
   cursor: pointer;
+}
+
+.primary {
+  background-color: var(--clr-primary-dark);
+}
+
+.button_container.secondary {
+  background-color: var(--clr-secondary-main);
 }
