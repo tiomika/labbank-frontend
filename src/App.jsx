@@ -15,6 +15,7 @@ function App() {
   return (
     <AppContext
       value={{
+        valores: { numeroDaConta, senha },
         mostrarValores,
         setNumeroDaConta,
         setSenha,
