@@ -18,8 +18,16 @@ function Login() {
     <div className="form_container">
       <Paper>
         <div className="login_header">
-          <Text element={"h1"}>Seja bem vindo!</Text>
-          <Text element={"paragraph"}>Digite os seus dados de acesso</Text>
+          <Text element={"h1"} weight="light">
+            Seja bem vindo!
+          </Text>
+          <Text
+            element={"paragraph"}
+            weight="light"
+            className="login_header-caption"
+          >
+            Digite os seus dados de acesso
+          </Text>
         </div>
         <div className="login_panels">
           <div className="login_panel column_panel">
