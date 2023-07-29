@@ -1,5 +1,11 @@
+:root {
+  --border-radius: 3px;
+  --font-size-base: 18px;
+}
+
 html {
   font-family: var(--fnt-font-family);
-  font-size: var(--fnt-font-size);
+  font-size: var(--font-size-base);
   color: var(--fnt-color);
+  background-color: var(--clr-background-dark);
 }

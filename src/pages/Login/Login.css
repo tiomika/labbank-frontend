@@ -1,0 +1,37 @@
+.login_header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.login_header .login_header-caption {
+  margin-bottom: 2rem;
+}
+
+.login_panels {
+  display: flex;
+}
+
+.login_panel {
+  flex: 1;
+}
+
+.login_panel .buttons {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.column_panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.column_align_right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}

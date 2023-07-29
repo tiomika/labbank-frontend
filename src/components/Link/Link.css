@@ -1,0 +1,13 @@
+a.link_container {
+  font-family: var(--fnt-font-family);
+  font-size: var(--fnt-font-smaller);
+  color: var(--fnt-font-color-primary);
+  line-height: 1rem;
+
+  text-decoration: none;
+  display: block;
+}
+
+a.link_container:hover {
+  color: var(--fnt-font-color-secondary);
+}

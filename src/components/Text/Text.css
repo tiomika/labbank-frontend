@@ -47,3 +47,19 @@
 .caption {
   font-size: var(--fnt-font-caption);
 }
+
+.light {
+  font-weight: var(--fnt-font-weight-light);
+}
+
+.regular {
+  font-weight: var(--fnt-font-weight-regular);
+}
+
+.medium {
+  font-weight: var(--fnt-font-weight-medium);
+}
+
+.bold {
+  font-weight: var(--fnt-font-weight-bold);
+}
