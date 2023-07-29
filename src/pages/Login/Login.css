@@ -1,0 +1,40 @@
+.form_container {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.login_header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.login_panels {
+  display: flex;
+}
+
+.login_panel {
+  flex: 1;
+}
+
+.login_panel .buttons {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.column_panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.column_align_right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
