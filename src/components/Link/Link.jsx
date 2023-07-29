@@ -1,12 +1,15 @@
 import PropTypes from "prop-types";
+import { Link as RRDLink } from "react-router-dom";
 
 import "./Link.css";
 
-function Link({ children, to, ...otherProps }) {
+function Link(props) {
+  const { children, to, ...otherProps } = props;
+
   return (
-    <a className="link_container" {...otherProps} href={to}>
+    <RRDLink className="link_container" {...otherProps} to={to}>
       {children}
-    </a>
+    </RRDLink>
   );
 }
 

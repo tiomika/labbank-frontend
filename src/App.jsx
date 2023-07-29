@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { Header } from "./components/Header";
-import { Login } from "./pages/Login";
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AppContext } from "./contexts/AppContext";
+import { Login } from "./pages/Login";
+import { SignUp } from "./pages/SignUp";
+
+import { Header } from "./components/Header";
 
 function App() {
   const [numeroDaConta, setNumeroDaConta] = useState("");
@@ -21,10 +24,13 @@ function App() {
         setSenha,
       }}
     >
-      <div>
+      <BrowserRouter>
         <Header />
-        <Login />
-      </div>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
     </AppContext>
   );
 }

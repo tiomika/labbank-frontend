@@ -40,7 +40,7 @@ function SignUp() {
             <img src={CustomerIllustration} alt="Wallet" />
           </div>
         </div>
-        <Link to="#">Cancelar</Link>
+        <Link to="/">Cancelar</Link>
       </Paper>
     </PageContainer>
   );
