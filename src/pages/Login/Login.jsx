@@ -9,10 +9,17 @@ import { Text } from "../../components/Text";
 import { TextInput } from "../../components/TextInput";
 import { appContext } from "../../contexts/AppContext";
 
+import { useNavigate } from "react-router-dom";
 import { PageContainer } from "../../components/Containers";
 import "./Login.css";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const navigateToSignUpPage = () => {
+    navigate("/signup");
+  };
+
   const {
     mostrarValores,
     setNumeroDaConta,
@@ -39,11 +46,14 @@ function Login() {
           <div className="login_panel column_panel">
             <TextInput
               onChangeText={setNumeroDaConta}
+              value={numeroDaConta}
               label="Número da conta com dígito"
               type="text"
             />
             <TextInput onChangeText={setSenha} label="Senha" type="password" />
-            <Link to="#">Esqueci minha senha</Link>
+
+            <Link to="/signup">Esqueci minha senha</Link>
+
             <div className="login_panel buttons">
               <Button
                 disabled={numeroDaConta.length < 7}
@@ -52,7 +62,11 @@ function Login() {
               >
                 Entrar
               </Button>
-              <Button color="secondary" fullWidth onClick={mostrarValores}>
+              <Button
+                color="secondary"
+                fullWidth
+                onClick={navigateToSignUpPage}
+              >
                 Quero abrir minha conta
               </Button>
             </div>

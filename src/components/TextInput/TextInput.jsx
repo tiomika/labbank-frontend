@@ -7,7 +7,15 @@ function TextInput(props) {
   // props.type
   // props.onChangeText
 
-  const { label, type, onChangeText, message, hasError, isValid } = props;
+  const {
+    label,
+    type,
+    onChangeText,
+    message,
+    hasError,
+    isValid,
+    ...otherProps
+  } = props;
 
   const errorClass = hasError ? "error" : "";
   const validClass = isValid ? "success" : "";
@@ -25,6 +33,7 @@ function TextInput(props) {
         onChange={(evento) => {
           onChangeText(evento.target.value);
         }}
+        {...otherProps}
       />
       <span>{message}</span>
     </div>
