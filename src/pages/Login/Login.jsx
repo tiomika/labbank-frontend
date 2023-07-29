@@ -9,6 +9,7 @@ import { Text } from "../../components/Text";
 import { TextInput } from "../../components/TextInput";
 import { appContext } from "../../contexts/AppContext";
 
+import { PageContainer } from "../../components/Containers";
 import "./Login.css";
 
 function Login() {
@@ -20,7 +21,7 @@ function Login() {
   } = useContext(appContext);
 
   return (
-    <div className="form_container">
+    <PageContainer>
       <Paper>
         <div className="login_header">
           <Text element={"h1"} weight="light">
@@ -61,7 +62,7 @@ function Login() {
           </div>
         </div>
       </Paper>
-    </div>
+    </PageContainer>
   );
 }
 
