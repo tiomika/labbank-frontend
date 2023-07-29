@@ -5,32 +5,58 @@ import "./Text.css";
 // const Text = () => {}
 
 function Text(props) {
-  switch (props.element) {
-    case "h1":
-      return <h1 className="text_container heading1">{props.children}</h1>;
-    case "h2":
-      return <h2 className="text_container heading2">{props.children}</h2>;
-    case "h3":
-      return <h3 className="text_container heading3">{props.children}</h3>;
-    case "h4":
-      return <h4 className="text_container heading4">{props.children}</h4>;
-    case "h5":
-      return <h5 className="text_container heading5">{props.children}</h5>;
-    case "small":
-    case "smaller":
-    case "caption":
-      return (
-        <span className={`text_container ${props.element}`}>
-          {props.children}
-        </span>
-      );
-    default:
-      return <p className="text_container paragraph">{props.children}</p>;
-  }
+  const {
+    element = "paragraph",
+    className = "",
+    weight = "regular",
+    ...otherProps
+  } = props;
+
+  const Element = {
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    h5: "h5",
+    small: "small",
+    smaller: "small",
+    caption: "span",
+    paragraph: "p",
+  }[element];
+
+  const elementStyle = {
+    h1: "heading1",
+    h2: "heading2",
+    h3: "heading3",
+    h4: "heading4",
+    h5: "heading5",
+    small: "small",
+    smaller: "smaller",
+    caption: "caption",
+    paragraph: "paragraph",
+  }[element];
+
+  const elementWeight = {
+    light: "light",
+    regular: "regular",
+    medium: "medium",
+    bold: "bold",
+  }[weight];
+
+  return (
+    <Element
+      className={`text_container ${elementStyle} ${elementWeight} ${className}`}
+      {...otherProps}
+    >
+      {props.children}
+    </Element>
+  );
 }
 
 Text.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  weight: PropTypes.oneOf(["light", "regular", "medium", "bold"]),
   element: PropTypes.oneOf([
     "h1",
     "h2",

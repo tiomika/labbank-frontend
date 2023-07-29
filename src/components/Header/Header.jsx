@@ -1,4 +1,4 @@
-import { Container } from "../Container";
+import { Container } from "../Containers";
 import { Logo } from "../Logo";
 
 import "./Header.css";

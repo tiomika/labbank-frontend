@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Header } from "./components/Header";
 import { Login } from "./pages/Login";
 
-import "./App.css";
 import { AppContext } from "./contexts/AppContext";
 
 function App() {
@@ -16,6 +15,7 @@ function App() {
   return (
     <AppContext
       value={{
+        valores: { numeroDaConta, senha },
         mostrarValores,
         setNumeroDaConta,
         setSenha,

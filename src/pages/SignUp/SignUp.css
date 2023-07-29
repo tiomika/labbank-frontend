@@ -1,23 +1,23 @@
-.login_header {
+.signup_header {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
   margin-bottom: 0.25rem;
 }
 
-.login_header .login_header-caption {
+.signup_header-caption {
   margin-bottom: 2rem;
 }
 
-.login_panels {
+.signup_panels {
   display: flex;
 }
 
-.login_panel {
+.signup_panel {
   flex: 1;
 }
 
-.login_panel .buttons {
+.signup_panel .buttons {
   width: 100%;
   margin-top: 1.5rem;
   display: flex;
