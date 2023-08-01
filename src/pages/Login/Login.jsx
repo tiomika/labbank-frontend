@@ -3,10 +3,10 @@ import WalletIllustration from "../../assets/imgs/wallet.svg";
 
 import { Button } from "../../components/Button";
 
+import { TextInput } from "../../components/Inputs";
 import { Link } from "../../components/Link";
 import { Paper } from "../../components/Paper";
 import { Text } from "../../components/Text";
-import { TextInput } from "../../components/TextInput";
 import { appContext } from "../../contexts/AppContext";
 
 import { useNavigate } from "react-router-dom";
