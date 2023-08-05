@@ -3,7 +3,6 @@
   font-size: var(--fnt-font-paragraph);
   font-weight: var(--fnt-font-weight-light);
   line-height: var(--fnt-line-height);
-  display: block;
   margin: 0;
   padding: 0;
 }
