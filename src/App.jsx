@@ -6,6 +6,7 @@ import { Login } from "./pages/Login";
 import { SignUp } from "./pages/SignUp";
 
 import { Header } from "./components/Header";
+import Home from "./pages/Home/Home";
 
 function App() {
   const [numeroDaConta, setNumeroDaConta] = useState("");
@@ -27,7 +28,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
