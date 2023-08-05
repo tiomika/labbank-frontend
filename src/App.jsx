@@ -1,12 +1,50 @@
 import { useState } from "react";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Outlet, Route, Routes } from "react-router-dom";
 import { AppContext } from "./contexts/AppContext";
 import { Login } from "./pages/Login";
 import { SignUp } from "./pages/SignUp";
 
 import { Header } from "./components/Header";
 import Home from "./pages/Home/Home";
+
+// TODO: FAZER A EXTRAÇÃO DOS COMPONENTES DE ROTA PARA UM ARQUIVO SEPARADO
+function PrivateRoutes() {
+  const isLogged = false;
+
+  if (!isLogged) {
+    return <Navigate to="/login" />;
+  }
+
+  return (
+    <Outlet />
+  );
+}
+
+// TODO: FAZER A EXTRAÇÃO DOS COMPONENTES DE ROTA PARA UM ARQUIVO SEPARADO
+function PublicRoutes() {
+  const isLogged = false;
+
+  if (isLogged) {
+    return <Navigate to="/" />;
+  }
+
+  return (
+    <Outlet />
+  );
+}
+
+// TODO: FAZER A EXTRAÇÃO DOS COMPONENTES DE ROTA PARA UM ARQUIVO SEPARADO
+function AppLayout() {
+  return (
+    <>
+      <Header />
+      <Outlet />
+    </>
+  );
+}
+
+
 
 function App() {
   const [numeroDaConta, setNumeroDaConta] = useState("");
@@ -26,11 +64,16 @@ function App() {
       }}
     >
       <BrowserRouter>
-        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route element={<AppLayout />}>
+            <Route element={<PrivateRoutes />}>
+              <Route path="/" element={<Home />} />
+            </Route>
+            <Route element={<PublicRoutes />}>
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<SignUp />} />
+            </Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </AppContext>
