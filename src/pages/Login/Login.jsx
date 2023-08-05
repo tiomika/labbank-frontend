@@ -12,9 +12,11 @@ import { appContext } from "../../contexts/AppContext";
 import { useNavigate } from "react-router-dom";
 import { PageContainer } from "../../components/Containers";
 
+import { useAuth } from "../../contexts/AuthContext";
 import "./Login.css";
 
 function Login() {
+  const { setIsLogged } = useAuth()
   const navigate = useNavigate();
 
   const navigateToSignUpPage = () => {
@@ -66,7 +68,7 @@ function Login() {
               <Button
                 disabled={isInvalidAccountNumber}
                 fullWidth
-                onClick={mostrarValores}
+                onClick={() => setIsLogged(true)}
               >
                 Entrar
               </Button>
