@@ -6,11 +6,12 @@ import { Login } from "./pages/Login";
 import { SignUp } from "./pages/SignUp";
 
 import { Header } from "./components/Header";
+import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import Home from "./pages/Home/Home";
 
 // TODO: FAZER A EXTRAÇÃO DOS COMPONENTES DE ROTA PARA UM ARQUIVO SEPARADO
 function PrivateRoutes() {
-  const isLogged = false;
+  const { isLogged } = useAuth()
 
   if (!isLogged) {
     return <Navigate to="/login" />;
@@ -23,7 +24,7 @@ function PrivateRoutes() {
 
 // TODO: FAZER A EXTRAÇÃO DOS COMPONENTES DE ROTA PARA UM ARQUIVO SEPARADO
 function PublicRoutes() {
-  const isLogged = false;
+  const { isLogged } = useAuth()
 
   if (isLogged) {
     return <Navigate to="/" />;
@@ -63,19 +64,21 @@ function App() {
         setSenha,
       }}
     >
-      <BrowserRouter>
-        <Routes>
-          <Route element={<AppLayout />}>
-            <Route element={<PrivateRoutes />}>
-              <Route path="/" element={<Home />} />
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<AppLayout />}>
+              <Route element={<PrivateRoutes />}>
+                <Route path="/" element={<Home />} />
+              </Route>
+              <Route element={<PublicRoutes />}>
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
+              </Route>
             </Route>
-            <Route element={<PublicRoutes />}>
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<SignUp />} />
-            </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </AppContext>
   );
 }
