@@ -2,10 +2,10 @@ import CustomerIllustration from "../../assets/imgs/customer.svg";
 
 import { Button } from "../../components/Button";
 import { PageContainer } from "../../components/Containers";
+import { TextInput } from "../../components/Inputs";
 import { Link } from "../../components/Link";
 import { Paper } from "../../components/Paper";
 import { Text } from "../../components/Text";
-import { TextInput } from "../../components/TextInput";
 
 import "./SignUp.css";
 
