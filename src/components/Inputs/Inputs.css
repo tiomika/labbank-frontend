@@ -3,6 +3,7 @@
   width: 100%;
   flex-direction: column;
   row-gap: 0.25rem;
+  position: relative;
 }
 
 /* label */
@@ -24,76 +25,127 @@
   color: var(--fnt-font-color-success);
 }
 
+/* icon */
+
+.input_group .icon-container {
+  outline: none;
+  border: none;
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: calc(1rem + 3px);
+  top: calc(1rem + 3px);
+  width: 2rem;
+  right: 2px;
+  color: inherit;
+  cursor: pointer;
+  background-color: var(--clr-text-white);
+  color: var(--clr-primary-dark);
+  transition: color 0.1s ease-in;
+}
+
+.input_group .icon-container:hover {
+  color: var(--clr-primary-main);
+}
+
+.input_group.error .icon-container {
+  color: var(--fnt-font-color-danger);
+}
+
+.input_group.success .icon-container {
+  color: var(--fnt-font-color-success);
+}
+
+.input_group.disabled .icon-container {
+  color: var(--clr-background-disabled);
+  cursor: not-allowed;
+}
+
 /* input */
 
-.input_group > input.input_control,
-.input_group > textarea.input_control {
+.input_group > input,
+.input_group > textarea {
+  background-color: var(--clr-text-white);
   font-family: var(--fnt-font-family);
   font-size: var(--fnt-font-paragraph);
   font-weight: var(--fnt-font-weight-regular);
   line-height: var(--fnt-line-height);
   color: var(--fnt-font-color-black);
-  border: 1px solid var(--clr-background-disabled);
   padding: 0.5rem;
+  border: 1px solid var(--clr-background-disabled);
   border-radius: var(--border-radius);
   outline: none;
   transition: border 0.2s ease-in, outline 0.2s ease-in;
 }
 
-.input_group > textarea.input_control {
+.input_group > textarea {
   resize: none;
 }
 
-.input_group > input.input_control:focus,
-.input_group > textarea.input_control:focus {
+.input_group > input:focus,
+.input_group > textarea:focus {
   border: 1px solid var(--clr-primary-main);
   outline: 1px solid var(--clr-primary-main);
 }
 
-.input_group > input.input_control::placeholder,
-.input_group > textarea.input_control::placeholder {
+.input_group > input::placeholder,
+.input_group > textarea::placeholder {
   font-family: var(--fnt-font-family);
   font-size: var(--fnt-font-paragraph);
   font-weight: var(--fnt-font-weight-light);
   color: var(--fnt-font-color-gray);
 }
 
-.input_group.error > input.input_control,
-.input_group.error > textarea.input_control {
+.input_group.error {
+  color: var(--fnt-font-color-danger);
+}
+
+.input_group.success {
+  color: var(--fnt-font-color-success);
+}
+
+.input_group.disabled {
+  color: var(--clr-background-disabled);
+}
+
+.input_group.error > input,
+.input_group.error > textarea {
   border: 1px solid var(--fnt-font-color-danger);
   color: var(--fnt-font-color-danger);
 }
 
-.input_group.error > input.input_control:focus,
-.input_group.error > textarea.input_control:focus {
+.input_group.error > input:focus,
+.input_group.error > textarea:focus {
   border: 1px solid var(--fnt-font-color-danger);
   outline: 1px solid var(--fnt-font-color-danger);
 }
 
-.input_group.error > input.input_control::placeholder,
-.input_group.error > textarea.input_control::placeholder {
+.input_group.error > input::placeholder,
+.input_group.error > textarea::placeholder {
   color: var(--fnt-font-color-danger);
 }
 
-.input_group.success > input.input_control,
-.input_group.success > textarea.input_control {
+.input_group.success > input,
+.input_group.success > textarea {
   border: 1px solid var(--fnt-font-color-success);
   color: var(--fnt-font-color-success);
 }
 
-.input_group.success > input.input_control:focus,
-.input_group.success > textarea.input_control:focus {
+.input_group.success > input:focus,
+.input_group.success > textarea:focus {
   border: 1px solid var(--fnt-font-color-success);
   outline: 1px solid var(--fnt-font-color-success);
 }
 
-.input_group.success > input.input_control::placeholder,
-.input_group.success > textarea.input_control::placeholder {
+.input_group.success > input::placeholder,
+.input_group.success > textarea::placeholder {
   color: var(--fnt-font-color-success);
 }
 
-.input_group.disabled > input.input_control,
-.input_group.disabled > textarea.input_control {
+.input_group.disabled > input,
+.input_group.disabled > textarea {
   border: 1px solid var(--clr-background-disabled);
   color: var(--clr-background-disabled);
   cursor: not-allowed;

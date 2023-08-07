@@ -1,0 +1,10 @@
+.home__top-bar {
+  background-color: var(--clr-background-light);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.home__top-bar__body {
+  display: flex;
+  justify-content: space-between;
+}

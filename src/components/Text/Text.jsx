@@ -22,6 +22,8 @@ function Text(props) {
     smaller: "small",
     caption: "span",
     paragraph: "p",
+    span: "span",
+    strong: "strong",
   }[element];
 
   const elementStyle = {
@@ -34,6 +36,8 @@ function Text(props) {
     smaller: "smaller",
     caption: "caption",
     paragraph: "paragraph",
+    span: "paragraph",
+    strong: "paragraph",
   }[element];
 
   const elementWeight = {
