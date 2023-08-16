@@ -1,4 +1,177 @@
-.under_construction {
+main {
+  margin-bottom: 50px;
+}
+
+/* Balance */
+.container__balance {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+.container__balance__values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  padding: 2rem 0;
+  background: var(--clr-background-light);
+}
+.box__balance__title {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+.box__balance__value {
+  display: block;
+  font-size: 2.5rem;
+  margin: 0;
+}
+.box__balance__value span {
+  color: var(--clr-secondary-main);
+}
+.box__balance__more {
+  display: block;
+  color: var(--clr-secondary-main);
+  text-decoration: none;
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+.box__balance__title,
+.box__balance__value,
+.box__balance__more {
+  padding-left: 1rem;
+}
+.box__details {
+  padding: 0 1rem;
+}
+.box__details__list {
+  list-style: none;
+  padding: 0;
+}
+.box__details__list li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 0.4rem;
+}
+.box__details__list li span {
+  font-size: 0.9rem;
+}
+.box__details__list li span:nth-child(2) {
+  text-align: end;
+  font-weight: 600;
+}
+.container__balance__image {
   text-align: center;
-  margin-top: 10rem;
+}
+
+/* Products */
+.container__products {
+  margin-top: 2rem;
+}
+.container__products h3 {
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.box__services {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+}
+.box__services a {
+  display: block;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.box__services a img {
+  width: 80px;
+  display: block;
+  margin: 0 auto 10px;
+}
+.box__services a:hover {
+  background-color: var(--clr-text-gray);
+  transition: all 0.8s;
+  color: var(--clr-text-white);
+}
+
+/* Transactions */
+.container__transactions__history {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+}
+.box__history {
+  background: var(--clr-background-light);
+  padding: 1rem 0 1rem 1rem;
+}
+.box__history__title {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+.box__history__month {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.box__history__list {
+  list-style: none;
+  padding: 0;
+}
+.box__history__list li {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr 1fr;
+  margin-bottom: 0.5rem;
+}
+.box__history__list li span:nth-child(1) {
+  font-weight: 600;
+}
+.box__history__list li span:nth-child(4) {
+  text-align: center;
+}
+.box__history__actions {
+  display: flex;
+  justify-content: end;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-right: 2.5rem;
+}
+.box__history__actions a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--clr-primary-dark);
+  border-radius: 5px;
+}
+.box__history__actions a:nth-child(1) {
+  background: var(--clr-primary-dark);
+  color: var(--clr-text-white);
+}
+.box__transactions__card h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.box__transactions__image {
+  display: block;
+  margin: auto;
+}
+.box__transactions__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.box__transactions__actions button {
+  background: var(--clr-secondary-main);
+  padding: 8px 10px;
+  color: var(--clr-text-white);
+  border: none;
+}
+.box__transactions__actions a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--clr-secondary-main);
 }
