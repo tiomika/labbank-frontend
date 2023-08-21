@@ -30,7 +30,7 @@ export const InputGroup = (props) => {
     <div className={`${styles.input_group} ${errorClass} ${validClass}`}>
       <div></div>
 
-      <label className={`${styles.input_label}`} htmlFor={id || name}>
+      <label className={styles.input_label} htmlFor={id || name}>
         {label}
       </label>
       {children}

@@ -2,8 +2,6 @@ import PropTypes from "prop-types";
 
 import styles from "./Button.module.css";
 
-console.log(styles.container);
-
 function Button({ children, fullWidth, color = "primary", ...otherProps }) {
   return (
     <button
