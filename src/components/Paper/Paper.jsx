@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-import "./Paper.css";
+import styles from "./Paper.module.css";
 
 function Paper({ children }) {
-  return <div className="paper_container">{children}</div>;
+  return <div className={styles.container}>{children}</div>;
 }
 
 Paper.propTypes = {

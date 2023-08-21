@@ -1,4 +1,4 @@
-.button_container {
+.container {
   width: 100%;
   background-color: var(--clr-primary-dark);
   font-size: var(--fnt-font-small);
@@ -10,17 +10,17 @@
   cursor: pointer;
 }
 
-.button_container.primary {
+.container.primary {
   background-color: var(--clr-primary-dark);
 }
 
-.button_container.secondary {
+.container.secondary {
   background-color: var(--clr-secondary-main);
 }
 
-button:disabled.button_container,
-button:disabled.button_container.primary,
-button:disabled.button_container.secondary {
+button:disabled.container,
+button:disabled.container.primary,
+button:disabled.container.secondary {
   background-color: var(--clr-background-disabled);
   color: var(--fnt-font-color-gray);
   cursor: not-allowed;

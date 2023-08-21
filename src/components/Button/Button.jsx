@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import "./Button.css";
+import styles from "./Button.module.css";
 
 function Button({ children, fullWidth, color = "primary", ...otherProps }) {
   return (
@@ -9,7 +9,7 @@ function Button({ children, fullWidth, color = "primary", ...otherProps }) {
       style={{
         width: fullWidth ? "100%" : "auto",
       }}
-      className={`button_container ${color}`}
+      className={`${styles.container} ${styles[color]}`}
     >
       {children}
     </button>

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./Inputs.css";
+import styles from "./Inputs.module.css";
 
 export const InputGroup = (props) => {
   const {
@@ -27,10 +27,10 @@ export const InputGroup = (props) => {
   }
 
   return (
-    <div className={`input_group ${errorClass} ${validClass}`}>
+    <div className={`${styles.input_group} ${errorClass} ${validClass}`}>
       <div></div>
 
-      <label className="input_label" htmlFor={id || name}>
+      <label className={styles.input_label} htmlFor={id || name}>
         {label}
       </label>
       {children}
