@@ -1,11 +1,11 @@
 import { Container } from "../Containers";
 import { Logo } from "../Logo";
 
-import "./Header.css";
+import styles from "./Header.module.css";
 
 function Header() {
   return (
-    <header className="header">
+    <header className={styles.header}>
       <Container>
         <Logo />
       </Container>
