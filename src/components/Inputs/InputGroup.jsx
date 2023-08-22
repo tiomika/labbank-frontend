@@ -23,7 +23,7 @@ export const InputGroup = (props) => {
   }
 
   if (!id && !name) {
-    console.error("InputGroup: Um input deve ter id ou name");
+    throw new Error("InputGroup: Um input deve ter id ou name");
   }
 
   return (
