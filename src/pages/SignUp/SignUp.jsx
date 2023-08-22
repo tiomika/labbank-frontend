@@ -28,6 +28,8 @@ function SignUp() {
         <div className="signup_panels">
           <div className="signup_panel column_panel">
             <TextInput
+              onChangeText={() => {}}
+              id="name"
               label="Qual é o seu nome?"
               placeholder="Digite o seu nome completo..."
               type="text"

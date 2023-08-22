@@ -23,11 +23,13 @@ export const InputGroup = (props) => {
   }
 
   if (!id && !name) {
-    console.error("InputGroup: Um input deve ter id ou name");
+    throw new Error("InputGroup: Um input deve ter id ou name");
   }
 
   return (
-    <div className={`${styles.input_group} ${errorClass} ${validClass}`}>
+    <div
+      className={`${styles.input_group} ${styles[errorClass]} ${styles[validClass]}`}
+    >
       <div></div>
 
       <label className={styles.input_label} htmlFor={id || name}>
@@ -35,7 +37,7 @@ export const InputGroup = (props) => {
       </label>
       {children}
       {Icon && (
-        <button onClick={onIconClick} className="icon-container">
+        <button onClick={onIconClick} className={styles["icon-container"]}>
           {Icon}
         </button>
       )}
