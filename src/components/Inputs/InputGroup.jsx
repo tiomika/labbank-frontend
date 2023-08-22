@@ -27,7 +27,9 @@ export const InputGroup = (props) => {
   }
 
   return (
-    <div className={`${styles.input_group} ${errorClass} ${validClass}`}>
+    <div
+      className={`${styles.input_group} ${styles[errorClass]} ${styles[validClass]}`}
+    >
       <div></div>
 
       <label className={styles.input_label} htmlFor={id || name}>
@@ -35,7 +37,7 @@ export const InputGroup = (props) => {
       </label>
       {children}
       {Icon && (
-        <button onClick={onIconClick} className="icon-container">
+        <button onClick={onIconClick} className={styles["icon-container"]}>
           {Icon}
         </button>
       )}
