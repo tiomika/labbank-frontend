@@ -1,27 +1,28 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { AppContext } from './contexts/AppContext';
-import { Login } from './pages/Login';
-import { SignUp } from './pages/SignUp';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { AuthProvider } from './contexts/AuthContext';
-import Home from './pages/Home/Home';
+import { Login } from "./pages/Login";
+import { SignUp } from "./pages/SignUp";
 
-import { PrivateRoutes } from './components/PrivateRoutes';
-import { PublicRoutes } from './components/PublicRoutes';
-import { AppLayout } from './components/AppLayout';
+import Home from "./pages/Home/Home";
+
+import { AppLayout } from "./components/AppLayout";
+import { PrivateRoutes } from "./components/PrivateRoutes";
+import { PublicRoutes } from "./components/PublicRoutes";
+
+import { AppProvider, AuthProvider } from "./contexts";
 
 function App() {
-  const [numeroDaConta, setNumeroDaConta] = useState('');
-  const [senha, setSenha] = useState('');
+  const [numeroDaConta, setNumeroDaConta] = useState("");
+  const [senha, setSenha] = useState("");
 
   const mostrarValores = () => {
     alert(`Número da conta: ${numeroDaConta}\nSenha: ${senha}`);
   };
 
   return (
-    <AppContext
+    <AppProvider
       value={{
         valores: { numeroDaConta, senha },
         mostrarValores,
@@ -44,7 +45,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </AuthProvider>
-    </AppContext>
+    </AppProvider>
   );
 }
 

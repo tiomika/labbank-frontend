@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import WalletIllustration from "../../assets/imgs/wallet.svg";
 
 import { Button } from "../../components/Button";
@@ -7,16 +6,15 @@ import { AccountInput, PasswordInput } from "../../components/Inputs";
 import { Link } from "../../components/Link";
 import { Paper } from "../../components/Paper";
 import { Text } from "../../components/Text";
-import { appContext } from "../../contexts/AppContext";
 
 import { useNavigate } from "react-router-dom";
 import { PageContainer } from "../../components/Containers";
+import { useApp, useAuth } from "../../contexts";
 
-import { useAuth } from "../../contexts/AuthContext";
 import "./Login.css";
 
 function Login() {
-  const { setIsLogged } = useAuth()
+  const { setIsLogged } = useAuth();
   const navigate = useNavigate();
 
   const navigateToSignUpPage = () => {
@@ -24,11 +22,10 @@ function Login() {
   };
 
   const {
-    mostrarValores,
     setNumeroDaConta,
     setSenha,
     valores: { numeroDaConta },
-  } = useContext(appContext);
+  } = useApp();
 
   const isInvalidAccountNumber = numeroDaConta.replace(/\D/g, "").length < 8;
 
