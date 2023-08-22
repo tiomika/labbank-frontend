@@ -6,7 +6,3 @@ export const appContext = createContext({
   setNumeroDaConta: () => {},
   setSenha: () => {},
 });
-
-const AppContext = appContext.Provider;
-
-export default AppContext;
