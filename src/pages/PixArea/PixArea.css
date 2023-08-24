@@ -1,0 +1,56 @@
+.container__pix {
+  background: var(--clr-background-light);
+  max-width: 100%;
+  width: 60%;
+  padding: 1.2rem;
+  margin: 2rem 0 3rem;
+}
+.area__pix h2,
+.favorites h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin: 0 0 2.5rem;
+}
+.area__pix form .btn__pix {
+  text-align: right;
+}
+.area__pix form button {
+  background: var(--clr-background-transparent) !important;
+  border: 1px solid var(--clr-primary-main);
+  color: var(--clr-primary-main);
+  display: inline-block;
+}
+.area__pix .pix__copy__paste,
+.area__pix .pix__tranfer__key {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--clr-primary-main);
+}
+.area__pix .pix__copy__paste {
+  margin: 2rem 0 1.5rem;
+}
+.favorites h2 {
+  margin-top: 2.5rem;
+}
+.favorites ul {
+  list-style: none;
+  padding: 0;
+}
+.favorites ul li {
+  margin-bottom: 1rem;
+}
+.favorites ul li span {
+  margin-left: 0.3rem;
+}
+.favorites .actions {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  margin-top: 2rem;
+}
+.favorites .actions a {
+  color: var(--clr-primary-main);
+  text-decoration: none;
+}
