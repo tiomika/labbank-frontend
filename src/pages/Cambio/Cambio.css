@@ -1,0 +1,70 @@
+.container__cambio {
+  background: var(--clr-background-light);
+  max-width: 100%;
+  width: 60%;
+  padding: 1.2rem;
+  margin: 2rem 0 3rem;
+}
+.area__cambio h2,
+.balance__currency h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin: 0 0 2.5rem;
+}
+.area__cambio form .col {
+  display: flex;
+  gap: 20px;
+  margin-top: 0.8rem;
+}
+.area__cambio form .total {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.area__cambio form .total > p {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.area__cambio form .total__details p {
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+.area__cambio form .total > p span,
+.area__cambio form .total__details p span {
+  font-weight: 400;
+}
+.area__cambio form .btn__cambio {
+  text-align: right;
+}
+.area__cambio form button {
+  background: var(--clr-background-transparent) !important;
+  border: 1px solid var(--clr-primary-main);
+  color: var(--clr-primary-main);
+  display: inline-block;
+}
+.balance__currency h2 {
+  margin-top: 2.5rem;
+}
+.balance__currency ul {
+  list-style: none;
+  padding: 0;
+}
+.balance__currency ul li {
+  margin-bottom: 1rem;
+  font-weight: 100;
+}
+.balance__currency ul li span {
+  margin-left: 0.3rem;
+  font-weight: 400;
+}
+.balance__currency .actions {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  margin-top: 2rem;
+}
+.balance__currency .actions a {
+  color: var(--clr-primary-main);
+  text-decoration: none;
+}

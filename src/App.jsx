@@ -7,6 +7,7 @@ import { SignUp } from './pages/SignUp';
 
 import { Home } from './pages/Home';
 import { PixArea } from './pages/PixArea';
+import { Cambio } from './pages/Cambio';
 
 import { AppLayout } from './components/AppLayout';
 import { PrivateRoutes } from './components/PrivateRoutes';
@@ -42,6 +43,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/pix" element={<PixArea />} />
+                <Route path="/cambio" element={<Cambio />} />
               </Route>
             </Route>
           </Routes>
